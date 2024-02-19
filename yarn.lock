@@ -393,11 +393,6 @@
   "resolved" "https://registry.npmjs.org/@sanity/timed-out/-/timed-out-4.0.2.tgz"
   "version" "4.0.2"
 
-"@stripe/stripe-js@^1.25.0":
-  "integrity" "sha512-SEiybUBu+tlsFKuzdFFydxxjkbrdzHo0tz/naYC5Dt9or/Ux2gcKJBPYQ4RmqQCNHFxgyNj6UYsclywwhe2inQ=="
-  "resolved" "https://registry.npmjs.org/@stripe/stripe-js/-/stripe-js-1.27.0.tgz"
-  "version" "1.27.0"
-
 "@types/json5@^0.0.29":
   "integrity" "sha1-7ihweulOEdK4J7y+UnC86n8+ce4="
   "resolved" "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
@@ -601,11 +596,6 @@
   "integrity" "sha512-1/Cg4jlD9qjZzhbzkzEaAC2JHsP0WrOc8Rd/3a3LuajGzGWR/hD7TVyvq99VqmTy99eVh8Zkmdq213OgvgXx7w=="
   "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001327.tgz"
   "version" "1.0.30001327"
-
-"canvas-confetti@^1.5.1":
-  "integrity" "sha512-Ncz+oZJP6OvY7ti4E1slxVlyAV/3g7H7oQtcCDXgwGgARxPnwYY9PW5Oe+I8uvspYNtuHviAdgA0LfcKFWJfpg=="
-  "resolved" "https://registry.npmjs.org/canvas-confetti/-/canvas-confetti-1.5.1.tgz"
-  "version" "1.5.1"
 
 "capture-stack-trace@^1.0.0":
   "integrity" "sha512-mYQLZnx5Qt1JgB1WEiMCf2647plpGeQ2NMR/5L0HNZzGQo4fuSPnK+wjfPnKZV0aiJDgzmWqqkV/g7JD+DW0qw=="
@@ -2127,14 +2117,6 @@
   "integrity" "sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig=="
   "resolved" "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz"
   "version" "3.1.1"
-
-"stripe@^8.209.0":
-  "integrity" "sha512-LY8cNGizEnklIa4T82l6mZW0HS4cfzo1hNuhT+ZR9PBkmYcSUbg3ilUBVF0FCd4RP+NA44VEVfoSTTZ1Gg5+rQ=="
-  "resolved" "https://registry.npmjs.org/stripe/-/stripe-8.216.0.tgz"
-  "version" "8.216.0"
-  dependencies:
-    "@types/node" ">=8.1.0"
-    "qs" "^6.10.3"
 
 "styled-jsx@5.0.0":
   "integrity" "sha512-qUqsWoBquEdERe10EW8vLp3jT25s/ssG1/qX5gZ4wu15OZpmSMFI2v+fWlRhLfykA5rFtlJ1ME8A8pm/peV4WA=="
