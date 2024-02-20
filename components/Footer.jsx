@@ -1,13 +1,13 @@
 import React from 'react';
-import { AiFillInstagram, AiOutlineTwitter} from 'react-icons/ai';
+import { AiFillInstagram, AiOutlineTwitter } from 'react-icons/ai';
 
 const Footer = () => {
   return (
     <div className="footer-container">
-      <p>2022 JSM Headphones All rights reserverd</p>
+      <p>© 2024 Redirect Shop | Todos os direitos reservados.</p>
       <p className="icons">
-        <AiFillInstagram />
-        <AiOutlineTwitter />
+        <a href='https://www.instagram.com/' target="_blank"> <AiFillInstagram /> </a>
+        <a href='https://www.twitter.com/' target="_blank"> <AiOutlineTwitter /> </a>
       </p>
     </div>
   )
