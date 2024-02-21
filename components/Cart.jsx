@@ -24,21 +24,21 @@ const Cart = () => {
           onClick={() => setShowCart(false)}
         >
           <AiOutlineLeft />
-          <span className="heading">Your Cart</span>
-          <span className="cart-num-items">({cartItems.length} items)</span>
+          <span className="heading">Seu Carrinho</span>
+          <span className="cart-num-items">({cartItems.length} itens)</span>
         </button>
 
         {cartItems.length < 1 && (
           <div className="empty-cart">
             <AiOutlineShopping size={150} />
-            <h3>Your shopping bag is empty</h3>
+            <h3>O seu carrinho de compras está vazio</h3>
             <Link href="/">
               <button
                 type="button"
                 onClick={() => setShowCart(false)}
                 className="btn"
               >
-                Continue Shopping
+                Continue Comprando
               </button>
             </Link>
           </div>
@@ -51,7 +51,7 @@ const Cart = () => {
               <div className="item-desc">
                 <div className="flex top">
                   <h5>{item.name}</h5>
-                  <h4>${item.price}</h4>
+                  <h4>R${item.price}</h4>
                   <button
                     type="button"
                     className="remove-item"
