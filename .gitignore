@@ -8,6 +8,9 @@ node_modules
 # testing
 /coverage
 
+# local env files
+.env*.local
+
 # next.js
 /.next/
 /out/

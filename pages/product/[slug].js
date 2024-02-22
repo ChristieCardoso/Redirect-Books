@@ -5,7 +5,7 @@ import { useStateContext } from '../../context/StateContext';
 
 const ProductDetails = ({ product, products }) => {
 
-  const { image, name, details, price, link, category } = product;
+  const { image, name, details, price, link } = product;
   const [index, setIndex] = useState(0);
   const { qty, onAdd } = useStateContext();
 
@@ -22,13 +22,14 @@ const ProductDetails = ({ product, products }) => {
       <div className="product-detail-container">
         <div>
           <div className="image-container">
-            <img src={urlFor(image && image[index])} className="product-detail-image" />
+            <img src={urlFor(image && image[index])} alt={name} className="product-detail-image" />
           </div>
           <div className="small-images-container">
             {image?.map((item, i) => (
               <img
                 key={i}
                 src={urlFor(item)}
+                alt={name}
                 className={i === index ? 'small-image selected-image' : 'small-image'}
                 onMouseEnter={() => setIndex(i)}
               />
@@ -91,11 +92,10 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const product = await client.fetch(query);
   const products = await client.fetch(productsQuery);
 
-  console.log(product);
 
   return {
     props: { products, product }
   }
 }
 
-export default ProductDetails
+export default ProductDetails;
