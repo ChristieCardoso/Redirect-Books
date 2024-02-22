@@ -5,7 +5,7 @@ import { useStateContext } from '../../context/StateContext';
 
 const ProductDetails = ({ product, products }) => {
 
-  const { image, name, details, price, link } = product;
+  const { image, name, details, price, link, category } = product;
   const [index, setIndex] = useState(0);
   const { qty, onAdd } = useStateContext();
 
