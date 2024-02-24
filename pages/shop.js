@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { client } from "../lib/client";
 import Product from '../components/Product';
+import banner from '../public/assets/banner-shop.png';
 
 const Shop = ({ products }) => {
 	const router = useRouter();
@@ -44,49 +46,50 @@ const Shop = ({ products }) => {
 	}, [category, query, sort, products]);
 
 	return (
-		<div className="shop-container">
-			<div className="products-heading">
-				<h2>Todos Os Livros</h2>
-			</div>
-			<div className="filter-container">
-				<label htmlFor="Query" className="filter-label">
-					Produto
-				</label>
-				<input
-					type="text"
-					placeholder="Pesquisar Produto..."
-					onChange={(e) => setQuery(e.target.value)}
-					autoFocus
-				/>
+		<>
+			<Image src={banner} alt="banner" height={350} />
+			<div className="shop-container">
+				<div className="filter-container">
+					<label htmlFor="Query" className="filter-label">
+						Produto
+					</label>
+					<input
+						type="text"
+						placeholder="Pesquisar Produto..."
+						onChange={(e) => setQuery(e.target.value)}
+						autoFocus
+					/>
 
-				<label htmlFor="Sort Products" className="filter-label">
-					Preço
-				</label>
-				<select onChange={(e) => setSort(e.target.value)} value={sort}>
-					<option value="featured">Destacado</option>
-					<option value="low to high">Preço: Menor para Maior</option>
-					<option value="high to low">Preço: Maior para Menor</option>
-				</select>
+					<label htmlFor="Sort Products" className="filter-label">
+						Preço
+					</label>
+					<select onChange={(e) => setSort(e.target.value)} value={sort}>
+						<option value="featured">Destacado</option>
+						<option value="low to high">Preço: Menor para Maior</option>
+						<option value="high to low">Preço: Maior para Menor</option>
+					</select>
 
-				<label htmlFor="Category" className="filter-label">
-					Categoria
-				</label>
-				<select onChange={(e) => setCategory(e.target.value)} value={category}>
-					{categoriesList.map((cat, index) => (
-						<option value={cat} key={index}>
-							{cat}
-						</option>
+					<label htmlFor="Category" className="filter-label">
+						Categoria
+					</label>
+					<select onChange={(e) => setCategory(e.target.value)} value={category}>
+						{categoriesList.map((cat, index) => (
+							<option value={cat} key={index}>
+								{cat}
+							</option>
+						))}
+					</select>
+				</div>
+
+				<div className="products-shop">
+					{productsList.map(product => (
+						<Product key={product._id} product={product} />
 					))}
-				</select>
-			</div>
 
-			<div className="products-shop">
-				{productsList.map(product => (
-					<Product key={product._id} product={product} />
-				))}
-
+				</div>
 			</div>
-		</div>
+		</>
+
 	);
 };
 

@@ -634,6 +634,10 @@ a {
 }
 
 @media screen and (max-width: 800px) {
+  .filter-container {
+    margin: auto;
+    width: 90%;
+  }
   .about-head {
     flex-direction: column;
     margin-top: 10px;
