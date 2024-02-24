@@ -6,7 +6,7 @@ import Footer from './Footer';
 
 const Layout = ({ children }) => {
   return (
-    <div className="layout">
+    <div>
       <Head>
         <title>Redirect Books</title>
       </Head>
