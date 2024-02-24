@@ -3,12 +3,8 @@ body,
 * {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   box-sizing: border-box;
-}
-::-webkit-scrollbar {
-  width: 0px;
+  user-select: none;
 }
 
 a {
@@ -18,7 +14,6 @@ a {
 
 .layout {
   padding: 10px 30px;
-  margin: auto;
 }
 
 /* Navbar */
@@ -26,16 +21,38 @@ a {
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  margin: 6px 18px;
-  position: relative;
+  align-items: center;
+  padding: 30px 5px;
+  font-family: sans-serif;
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    background-image: url("../public/assets/br.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
+    background-clip: text;
+  }
 }
-.logo {
-  color: gray;
-  font-size: 18px;
+.navbar-itens {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
-.navbar-shop {
-  color: gray;
+.navbar-menu {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  list-style-type: none;
   font-size: 18px;
+
+  li {
+    transition: transform 0.4s ease;
+  }
+  li:hover {
+    transform: scale(1.1, 1.1);
+  }
 }
 .cart-icon {
   font-size: 25px;
@@ -517,6 +534,24 @@ a {
 }
 
 @media screen and (max-width: 800px) {
+  .navbar-container {
+    display: flex;
+    h1 {
+      width: 30%;
+      font-size: 1.5rem;
+    }
+  }
+
+  .navbar-itens {
+    display: flex;
+    gap: 20px;
+  }
+
+  .navbar-menu {
+    display: flex;
+    gap: 2rem;
+  }
+
   .hero-banner-container {
     height: 560px;
   }
