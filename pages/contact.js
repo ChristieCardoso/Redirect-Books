@@ -8,7 +8,7 @@ import { MdLocationOn, MdEmail, MdLocalPhone, MdWatchLater } from "react-icons/m
 
 const Contact = () => {
   return (
-    <div >
+    <>
       <Image src={banner} alt="banner" />
       <div className="contact-details">
         <div className="details">
@@ -60,7 +60,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
