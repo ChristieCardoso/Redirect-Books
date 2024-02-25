@@ -4,10 +4,9 @@ import { Product, FooterBanner, HeroBanner } from '../components';
 
 const Home = ({ products, bannerData }) => (
   <div>
-    <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
+    <HeroBanner />
     <div className="products-heading">
       <h2>Computação e Informática</h2>
-
       <div className="products-container">
         {products.filter(product => product.category === 'Tecnologia').map((product) => (
           <Product key={product._id} product={product} />
